@@ -1,3 +1,3 @@
 # Compiladores
 
-Código em Python 3 de alguns dos algortimos do Dragão.
+Material auxiliar para a discilpina de Compiladores.
