@@ -197,19 +197,19 @@ if __name__ == '__main__':
     act_tb, goto_tb = slr_parsing_table(g)
     print_slr_table(act_tb, goto_tb)        
 
-    # Production rules for grammar 4.28
-    p = {"E" : [("T", "E2")],
-         "E2" : [("+", "T", "E2"), ("epsilon",)],
-         "T" : [("F", "T'")],
-         "T'" : [("*", "F", "T'"), ("epsilon",)],
-         "F" : [("(", "E", ")"), ("id",)]}
-    # Grammar 4.28
-    g = Grammar("E", p, ["E", "E2", "T", "T'", "F"],
-                ["+", "*", "(", ")", "id"])
-    augment(g)
-    print("\n# Production rules for Example 4.32, pg. 225, Grammar 4.28.")    
-    g.print_productions()
-    g.compute_first()
-    g.compute_follow()
-    act_tb, goto_tb = slr_parsing_table(g)
-    print_slr_table(act_tb, goto_tb)    
+    # # Production rules for grammar 4.28
+    # p = {"E" : [("T", "E2")],
+    #      "E2" : [("+", "T", "E2"), ("epsilon",)],
+    #      "T" : [("F", "T'")],
+    #      "T'" : [("*", "F", "T'"), ("epsilon",)],
+    #      "F" : [("(", "E", ")"), ("id",)]}
+    # # Grammar 4.28
+    # g = Grammar("E", p, ["E", "E2", "T", "T'", "F"],
+    #             ["+", "*", "(", ")", "id"])
+    # augment(g)
+    # print("\n# Production rules for Example 4.32, pg. 225, Grammar 4.28.")    
+    # g.print_productions()
+    # g.compute_first()
+    # g.compute_follow()
+    # act_tb, goto_tb = slr_parsing_table(g)
+    # print_slr_table(act_tb, goto_tb)    
